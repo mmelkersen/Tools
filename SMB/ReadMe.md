@@ -29,14 +29,25 @@ PowerShell tool to measure SMB (Server Message Block) file transfer speeds while
     ```
 
 ## Quick Start
-- CLI (recursive copy, multiple runs):
-    ```powershell
-    .\Measure-SMBTransferSpeed.ps1 -SourcePath "\\server\share\folder" -DestinationPath "C:\Temp\SMBTest" -Recurse -Runs 5
-    ```
-- GUI:
-    ```powershell
-    .\Measure-SMBTransferSpeed.ps1 -ShowGUI Yes
-    ```
+
+**Step 1: Import the module**
+```powershell
+Import-Module .\Measure-SMBTransferSpeed.ps1
+```
+
+**Step 2: Run the script using CLI (recursive copy, multiple runs):**
+```powershell
+Measure-SMBTransferSpeed -SourcePath "\\server\share\folder" -DestinationPath "C:\Temp\SMBTest" -Recurse -Runs 5
+```
+
+**Or launch the GUI:**
+```powershell
+Measure-SMBTransferSpeed -ShowGUI Yes
+```
+
+> **Note:**  
+> If you want to run the script directly (e.g., `.\Measure-SMBTransferSpeed.ps1 ...`), make sure the script supports being called as a standalone executable as well as a module.  
+> Otherwise, importing the module and calling `Measure-SMBTransferSpeed` is the recommended method.
 
 ## Parameters
 - SourcePath: Source files (local or UNC). Required unless using GUI

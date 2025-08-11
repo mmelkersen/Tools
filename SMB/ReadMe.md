@@ -83,8 +83,6 @@ Acknowledgements for development, testing, and input:
 a feature branch, submit a PR
 ## Learn More
 - PowerShell documentation: https://learn.microsoft.com/powershell/
-- Power settings GUIDs: https://learn.microsoft.com/windows/win32/power/power-setting-guids## License
- preferred license. Consider MIT for simplicity.## Contributing
 - Fork, create a feature branch, submit a PR
 - Open issues for bugs and enhancements
 

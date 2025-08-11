@@ -79,8 +79,11 @@ Acknowledgements for development, testing, and input:
 ## Notes
 - File: Measure-SMBTransferSpeed.ps1
 - Author: Mattias Melkersen
-- Version: 1.0.0## Contributing
-a feature branch, submit a PR
+- Version: 1.0.0
+
+## Contributing
+- feature branch, submit a PR
+
 ## Learn More
 - PowerShell documentation: https://learn.microsoft.com/powershell/
 - Fork, create a feature branch, submit a PR

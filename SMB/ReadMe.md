@@ -50,13 +50,13 @@ PowerShell tool to measure SMB (Server Message Block) file transfer speeds while
     ```powershell
     Measure-SMBTransferSpeed -SourcePath "\\server\share\folder" -DestinationPath "C:\temp" -Recurse -Runs 1
     ```
-    [![Measure-SMBTransferSpeed CLI](./images/Measure-SMBTransferSpeed-CLI.png)](./images/Measure-SMBTransferSpeed-CLI.png)
+    [![Measure-SMBTransferSpeed CLI](../images/Measure-SMBTransferSpeed-CLI.png)](../images/Measure-SMBTransferSpeed-CLI.png)
 - GUI preview:
     ```powershell
     .\Measure-SMBTransferSpeed.ps1 -ShowGUI Yes
     ```
-    [![Measure-SMBTransferSpeed GUI](./images/Measure-SMBTransferSpeed-GUI.png)](./images/Measure-SMBTransferSpeed-GUI.png)
-    [![Measure-SMBTransferSpeed GUI Documentation](./images/Measure-SMBTransferSpeed-GUI-Documentation.png)](./images/Measure-SMBTransferSpeed-GUI-Documentation.png)
+    [![Measure-SMBTransferSpeed GUI](../images/Measure-SMBTransferSpeed-GUI.png)](../images/Measure-SMBTransferSpeed-GUI.png)
+    [![Measure-SMBTransferSpeed GUI Documentation](../images/Measure-SMBTransferSpeed-GUI-Documentation.png)](../images/Measure-SMBTransferSpeed-GUI-Documentation.png)
 
 ## Output
 - Console/GUI progress with speeds and totals

@@ -161,22 +161,23 @@ function Measure-SMBTransferSpeed {
         if ($zscalerService) {
             $zscalerStatus = if ($zscalerService.Status -eq 'Running') { "Active" } else { "Inactive" }
             
-            # Check for ZPA (Private Access) - look for ZPA-related processes or services
-            $zpaProcess = Get-Process -Name "Zscaler-osx", "ZscalerTunnel", "ZPA*" -ErrorAction SilentlyContinue
-            $zpaService = Get-Service -Name "*ZPA*", "*Private*Access*" -ErrorAction SilentlyContinue
-            
-            if ($zpaProcess -or $zpaService) {
-                $zpaStatus = "Enabled"
-            } else {
-                # Alternative check - look for ZPA network adapters
-                $zpaAdapter = Get-NetAdapter | Where-Object { $_.Name -like "*Zscaler*" -or $_.Name -like "*ZPA*" } -ErrorAction SilentlyContinue
-                $zpaStatus = if ($zpaAdapter) { "Enabled" } else { "Disabled" }
+            # Check for ZPA (Private Access) status from registry
+            try {
+                $zpaAuthState = Get-ItemProperty -Path "HKCU:\Software\Zscaler\App" -Name "ZPAAuth_State" -ErrorAction SilentlyContinue
+                if ($zpaAuthState -and $zpaAuthState.ZPAAuth_State -eq "AUTHENTICATED") {
+                    $zpaStatus = "Active"
+                } else {
+                    $zpaStatus = "N/A"
+                }
+            }
+            catch {
+                $zpaStatus = "N/A"
             }
         }
     }
     catch {
         $zscalerStatus = "Check failed"
-        $zpaStatus = "Check failed"
+        $zpaStatus = "N/A"
     }
     
     # Extract hostname from UNC path and perform nslookup

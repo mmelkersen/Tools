@@ -71,6 +71,11 @@ PowerShell tool to measure SMB (Server Message Block) file transfer speeds while
 - Verify share permissions and path reachability
 - For GUI, ensure .NET Framework 4.5+ is available
 
+## Credits
+Acknowledgements for development, testing, and input:
+- [Bo Bertelsen](https://www.linkedin.com/in/bertelsenbo/)
+- [Michael Sonne](https://www.linkedin.com/in/michaelmsonne/)
+
 ## Notes
 - File: Measure-SMBTransferSpeed.ps1
 - Author: Mattias Melkersen

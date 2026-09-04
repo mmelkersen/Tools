@@ -868,5 +868,5 @@ function Show-SMBTransferGUI {
 }
 
 # Example usage:
-# Measure-SMBTransferSpeed -ShowGUI Yes
+ Measure-SMBTransferSpeed -ShowGUI Yes
 # Measure-SMBTransferSpeed -SourcePath "\\server\yourfiles" -DestinationPath "C:\temp" -Recurse -Runs 1 -ShowGUI No -CheckSignature
